@@ -48,6 +48,8 @@ All core methods inside controller/service/repository/cache/validator are covere
 ### Containerization
 A docker file is created in the project and already validated in my local that it can be successfully built as an image and running in container.
 Docker version in my local is 28.1.1
+![Image text](pictures/docker_running.png)
+
 
 ### Dependencies
 1. spring-boot-starter-web: spring boot framework
@@ -67,15 +69,15 @@ scale: 1,000,000 transactions
 
 Perf testing result:
 1. Add - 9908.2 requests/sec
-   ![Image text](perf_tests_add.png)
+   ![Image text](pictures/perf_tests_add.png)
 2. Query by id - 11064.8 requests/sec
-   ![Image text](perf_tests_query.png)
+   ![Image text](pictures/perf_tests_query.png)
 3. Query with page (size = 10) - 263.5 requests/sec
-   ![Image text](perf_tests_query_with_page.png)
+   ![Image text](pictures/perf_tests_query_with_page.png)
 4. Modify - 7873.1 requests / sec
-   ![Image text](perf_tests_modify.png)
+   ![Image text](pictures/perf_tests_modify.png)
 5. Delete - 9060.4 requests / sec
-   ![Image text](perf_tests_delete.png)
+   ![Image text](pictures/perf_tests_delete.png)
     
 
 
