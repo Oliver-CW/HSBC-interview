@@ -1,3 +1,7 @@
+server:
+  port: 8080
+  shutdown: graceful
+
 spring:
   application:
     name: hsbc-interview-transaction
@@ -13,7 +17,6 @@ spring:
       enabled: true
       path: "/h2-console"
       settings.trace: false
-      settings.web-allow-others: false
 
   jpa:
     database-platform: "org.hibernate.dialect.H2Dialect"
@@ -26,3 +29,7 @@ logging:
         web:
           filter:
             CommonsRequestLoggingFilter: DEBUG
+
+cache:
+  expireSecondsAfterAccess: 60
+  maxSize: 100000
